@@ -1,3 +1,14 @@
 body {
   background-color: #acd4f7;
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 16px;
+   line-height: 1.5;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+p {
+  font-size: 18px;
 }
