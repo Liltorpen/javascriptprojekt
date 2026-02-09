@@ -1,7 +1,7 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
 
 body {
@@ -10,7 +10,7 @@ body {
   color: #2b2b2b;
 }
 
-/* Header */
+/* Header /
 .header {
   position: absolute;
   top: 0;
@@ -32,7 +32,7 @@ body {
   cursor: pointer;
 }
 
-/* Hero */
+/ Hero */
 .hero {
   height: 90vh;
   background-image: url("is-hero.jpg");
