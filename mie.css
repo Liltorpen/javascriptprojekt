@@ -1,8 +1,12 @@
-/* 1. GRUNDLÆGGENDE RESET */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -13,9 +17,8 @@ body {
 
 /* 2. HERO SEKTION (BAGGRUNDSBILLEDE) */
 .hero {
-    height: 100vh;
+    height: 98vh;
     width: 100%;
-    /* Husk at filen skal hedde baggrund.jpg og ligge i samme mappe */  
     background-position: center;
     position: relative;
     display: flex;
@@ -28,13 +31,13 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 40px 60px;
-    position: absolute;
+    position: relative;
     width: 100%;
-    z-index: 100; /* Altid øverst */
+    z-index: 100; 
 }
 
 .logo img {
-    height: 60px; /* Her kan du justere størrelsen på dit logo */
+    height: 60px;
 }
 
 /* 4. BURGER-IKONET */
@@ -59,30 +62,29 @@ body {
 .slider-container {
     position: absolute;
     inset: 0;
-    z-index: 1; /* Lav værdi så den bliver i baggrunden */
+    z-index: 1;
     overflow: hidden;
 }
 
-/* 2. Overlayet (Ligger inde i containeren, men over billederne) */
+/* 2. Overlayet  */
 .slider-container::after {
     content: '';
     position: absolute;
     inset: 0;
-    /* Din linear-gradient overlay */
     background: linear-gradient(
         to bottom, 
         rgba(0,0,0,0.4) 100%, 
         transparent 50%, 
         rgba(0,0,0,0.7) 100%
     );
-    z-index: 2; /* Højere end billederne, men lavere end teksten */
-    pointer-events: none; /* VIGTIGT: Gør at man kan klikke "igennem" skyggen */
+    z-index: 2;
+    pointer-events: none; 
 }
 
 .hero-slider {
     position: relative;
     width: 100%;
-    height: 90vh; /* Juster højden her */
+    height: 90vh; 
     overflow: hidden;
     background: #000;
 }
@@ -122,12 +124,12 @@ body {
 }
 
 button:hover { background: rgba(255, 255, 255, 0.4); }
-.prev { left: 20px; z-index: 20; /* Skal være højere end både overlay og tekst for at virke */}
-.next { right: 20px; z-index: 20; /* Skal være højere end både overlay og tekst for at virke */ }
+.prev { left: 20px; z-index: 20;}
+.next { right: 20px; z-index: 20;}
 
 
 /* 5. HERO INDHOLD (TEKSTEN I MIDTEN) */
-.hero-content {
+#hero-content {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -150,7 +152,7 @@ button:hover { background: rgba(255, 255, 255, 0.4); }
 }
 
 .subtitle {
-    font-size: 0.9rem; /* Rettet: Punktum i stedet for komma */
+    font-size: 0.9rem;
     letter-spacing: 4px;
     text-transform: uppercase;
     margin-bottom: 80px;
@@ -161,37 +163,22 @@ button:hover { background: rgba(255, 255, 255, 0.4); }
     font-style: italic;
 }
 
-/* 6. BESTIL IS-BOKS (DEN RØDE KNAP I SIDEN) */
-.side-tab {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%) rotate(-90deg);
-    transform-origin: right bottom;
-    background-color: #8b2c35;
-    color: white;
-    padding: 15px 30px;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    letter-spacing: 2px;
-    cursor: pointer;
-    z-index: 50;
-}
-
 /* 7. SIDE-MENU (SLIDER IND FRA HØJRE) */
 #side-menu {
-    position: fixed;
+position: fixed;
     top: 0;
-    right: -450px; /* Starter uden for skærmen */
+    right: -100%;
     width: 400px;
+    max-width: 100%;
     height: 100vh;
-    background-color: rgba(139, 44, 53, 0.98); /* Gudhjem Is rød */
+    background-color: rgba(139, 44, 53, 0.98);
     z-index: 2000;
     transition: 0.5s ease-in-out;
     padding: 100px 60px;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Denne klasse tilføjes via JavaScript når man trykker på burger */
 #side-menu.open {
     right: 0;
 }
@@ -219,7 +206,7 @@ button:hover { background: rgba(255, 255, 255, 0.4); }
     font-family: 'Playfair Display', serif;
     color: white;
     text-decoration: none;
-    font-size: 1.3rem; /* Her styres størrelsen på menu-teksten */
+    font-size: 1.3rem;
     font-weight: 400;
     transition: 0.3s;
 }
@@ -238,15 +225,16 @@ button:hover { background: rgba(255, 255, 255, 0.4); }
 }
 
 #intro {
-  padding: 100px 20px;
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
   max-width: 65ch;
+  font-family: "Playfair Display", serif;
 }
 
 #intro p {
   margin: 30px 0;
+  font-family: "Montserrat", sans-serif;
 }
 
 #historie {
@@ -343,7 +331,7 @@ button:hover { background: rgba(255, 255, 255, 0.4); }
 }
 
 /* kontakt */
-.kontakt {
+#kontakt {
   background: #f6f3ef;
   padding: 120px 80px;
 }
@@ -424,9 +412,70 @@ button:hover { background: rgba(255, 255, 255, 0.4); }
   align-self: flex-end;
 }
 
+#vis-smage-btn {
+    background-color: #8b2c35;
+    color: white;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
 
+#smag-sektion {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #ffffff;
+}
 
+/* Transition og synlighedskontrol via max-height og opacity */
+#smag-wrapper {
+    max-height: 0; 
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.7s ease-in-out, opacity 0.5s ease;
+    margin: 0 auto;
+    max-width: 500px;
+}
 
+#smag-wrapper.aaben {
+    max-height: 1200px;
+    opacity: 1;
+    margin-top: 30px;
+}
+
+.smag-liste {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.smag-item {
+    background-color: #f9f9f9;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border-left: 6px solid #8b2c35;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.smag-item strong {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.moms-info {
+    font-size: 0.8rem;
+    color: #777;
+    margin-top: 20px;
+}
 
 @media (max-width: 768px) {
     .contact-grid {

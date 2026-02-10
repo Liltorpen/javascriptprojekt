@@ -8,93 +8,61 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="js/mie.js" defer></script>
     <script src="js/java-galler.js" defer></script>
+    <script src="js/favoritter.js" defer></script>
     <link rel="stylesheet" href="mie.css">
 </head>
+
 <body>
-
-    <header class="hero">
-        
-<nav class="navbar">
-    <div class="logo">
-        <img src="images/gudhjemislogo.png" alt="Gudhjem Is Logo">
-    </div>
-
-    <div id="burger-menu">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-</nav>
-
-
-<div id="side-menu">
-    <div id="close-menu">&times;</div>
-  
-    <ul class="nav-links" id="menu-container">
-     
-    </ul>
-</div>
-
-<div id="menu-shade"></div>
-
-
-        <div class="hero-content">
-            <h1>Hele Bornholms ishus på Gudhjem havn</h1>
-            <p class="subtitle">EN SØD BID AF BORNHOLM SIDEN 1959</p>
-            <p class="opening-info">Vi åbner til påske 28. marts. og glæder os til at se jer alle</p>
-        </div>
-        <div class="slider-container">
-
-        <div class="slide active">
-            <img src="imagesgalleri1/1.png" alt="Billede af to is">
-        </div>
-        
-        <div class="slide">
-            <img src="imagesgalleri1/2.jpg" alt="Billede af Gudhjem Havn ude foran isbutikken">
-        </div>
-
-        <div class="slide">
-            <img src="imagesgalleri1/3.jpg" alt="Billede af to is">
-        </div>
-
-        <div class="slide">
-            <img src="imagesgalleri1/4.jpg" alt="Billede af en is, foran Gudhjem Havn">
-        </div>
-        </div>
-    </header>
-
-   <!-- 1. Denne del har du allerede (Trigger) -->
-<nav class="navbar">
-    <div class="logo">
-        <img src="images/gudhjemislogo.png" alt="Gudhjem Is Logo">
-    </div>
-
-    <div id="burger-menu">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-</nav>
-
-<!-- 2. DENNE DEL SKAL LIGGE LIGE UNDER (Beholderen) -->
-<div id="side-menu">
-    <div id="close-menu">&times;</div>
+  <div id="side-menu">
+      <div id="close-menu">&times;</div>
     
-    <!-- Det er HERINDE dit "IS-KORT 2026" dukker op, fordi id'et matcher JS -->
-    <ul class="nav-links" id="menu-container">
-        <!-- Lad denne være helt tom! -->
-    </ul>
-</div>
+      <ul class="nav-links" id="menu-container">
+      
+      </ul>
+  </div>
+  <header class="hero">
+    <nav class="navbar">
+        <div class="logo">
+          <a href="#hero-content">
+            <img src="images/gudhjemislogo.png" alt="Gudhjem Is Logo">
+            </a>
+        </div>
 
-<!-- 3. Husk også skyggen -->
-<div id="menu-shade"></div>
+        <div id="burger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
 
+    <div id="menu-shade"></div>
+
+    <div id="hero-content">
+        <h1>Hele Bornholms ishus på Gudhjem havn</h1>
+        <p class="subtitle">EN SØD BID AF BORNHOLM SIDEN 1959</p>
+        <p class="opening-info">Vi åbner til påske 28. marts. og glæder os til at se jer alle</p>
+    </div>
+    <div class="slider-container">
+
+    <div class="slide active">
+        <img src="imagesgalleri1/1.png" alt="Billede af to is">
+    </div>
+    
+    <div class="slide">
+        <img src="imagesgalleri1/2.jpg" alt="Billede af Gudhjem Havn ude foran isbutikken">
+    </div>
+
+    <div class="slide">
+        <img src="imagesgalleri1/3.jpg" alt="Billede af to is">
+    </div>
+
+    <div class="slide">
+        <img src="imagesgalleri1/4.jpg" alt="Billede af en is, foran Gudhjem Havn">
+    </div>
+    </div>
+  </header>
+ 
   <main>
-    <section id="intro">
-      <h2>Is, sommerdrømme & Gudhjem i solen</h2>
-      <p>Ishuset på Gudhjem havn siden 1959. Vi er idag 3. generation der driver ishuset med samme passion forgod is, sommer og ferie.</p>
-    </section>
-
     <section id="historie">
     <div id="historie-container">
       <div id="historie-image">
@@ -108,82 +76,96 @@
     </div>
     </section>
 
-  <section class="contact-section">
-    <div class="contact-grid">
-        <div class="info-box">
-            <h2>Åbningstider</h2>
-            <div class="divider"></div>
-            <p>Vi holder vinterlukket lige nu.</p>
-            <p><strong>Vi åbner igen til påske:</strong><br>
-            Fredag d. 28. marts 2026</p>
-            <p>Følg med her på siden eller på vores sociale medier for opdaterede tider i løbet af sæsonen.</p>
-        </div>
-
-
-        <div class="info-box">
-            <h2>Kontakt os</h2>
-            <div class="divider"></div>
-            <p>Gudhjem Is / Ishuset på havnen</p>
-            <p>Ejnar Mikkelsens Vej 15<br>
-            3760 Gudhjem</p>
-            <p>Email: <a href="mailto:is@gudhjemis.dk">is@gudhjemis.dk</a></p>
-            <p>Telefon: +45 12 34 56 78</p>
-        </div>
-      </div>
-  </section>
-
-  <section class="kontakt">
-    <div class="kontakt-wrapper">
-
-      <!-- Venstre del -->
-      <div class="kontakt-info">
-        <h2>Kontakt os!</h2>
-        <p class="kontakt-subtitle">Telefon: 93 99 37 60</p>
-
-        <p class="kontakt-text">
-          bla bla bla bla bla bla bla bla   bla bla bla bla bla bla bla bla   bla bla bla bla bla bla bla bla
-        </p>
-
-        <div class="kontakt-details">
-          <div class="email">
-            ✉️ <span>E-mail: info@gudhjemis.dk</span>
-          </div>
-
-          <div class="socials">
-            <span>f</span>
-            <span>in</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Højre del -->
-      <form class="kontakt-form">
-        <div class="row">
-          <div class="tekst">
-            <label>Fornavn</label>
-            <input type="text">
-          </div>
-
-          <div class="tekst">
-            <label>Telefon nummer</label>
-            <input type="text">
-          </div>
-        </div>
-
-        <div class="tekst">
-          <label>Email *</label>
-          <input type="email" required>
-        </div>
-
-        <div class="tekst">
-          <label>Besked</label>
-          <textarea rows="5"></textarea>
-        </div>
-
-        <button type="submit">Send</button>
-      </form>
+    <section id="smag-sektion">
+    <div id="intro">
+      <h2>Is, sommerdrømme & Gudhjem i solen</h2>
+      <p>Ishuset på Gudhjem havn siden 1959. Vi er idag 3. generation der driver ishuset med samme passion forgod is, sommer og ferie.</p>
     </div>
-  </section>
+        <div class="container">
+          <h2></h2>
+            <button id="vis-smage-btn">Se vores lækre udvalg</button>
+            <div id="smag-wrapper">
+                <div id="smag-output"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="contact-grid">
+          <div class="info-box">
+              <h2>Åbningstider</h2>
+              <div class="divider"></div>
+              <p>Vi holder vinterlukket lige nu.</p>
+              <p><strong>Vi åbner igen til påske:</strong><br>
+              Fredag d. 28. marts 2026</p>
+              <p>Følg med her på siden eller på vores sociale medier for opdaterede tider i løbet af sæsonen.</p>
+          </div>
+
+
+          <div class="info-box">
+              <h2>Kontakt os</h2>
+              <div class="divider"></div>
+              <p>Gudhjem Is / Ishuset på havnen</p>
+              <p>Ejnar Mikkelsens Vej 15<br>
+              3760 Gudhjem</p>
+              <p>Email: <a href="mailto:is@gudhjemis.dk">is@gudhjemis.dk</a></p>
+              <p>Telefon: +45 12 34 56 78</p>
+          </div>
+        </div>
+    </section>
+  
+    <section id="kontakt">
+      <div class="kontakt-wrapper">
+
+        <!-- Venstre del -->
+        <div class="kontakt-info">
+          <h2>Kontakt os!</h2>
+          <p class="kontakt-subtitle">Telefon: 93 99 37 60</p>
+
+          <p class="kontakt-text">
+            bla bla bla bla bla bla bla bla   bla bla bla bla bla bla bla bla   bla bla bla bla bla bla bla bla
+          </p>
+
+          <div class="kontakt-details">
+            <div class="email">
+              ✉️ <span>E-mail: info@gudhjemis.dk</span>
+            </div>
+
+            <div class="socials">
+              <span>f</span>
+              <span>in</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Højre del -->
+        <form class="kontakt-form">
+          <div class="row">
+            <div class="tekst">
+              <label>Fornavn</label>
+              <input type="text">
+            </div>
+
+            <div class="tekst">
+              <label>Telefon nummer</label>
+              <input type="text">
+            </div>
+          </div>
+
+          <div class="tekst">
+            <label>Email *</label>
+            <input type="email" required>
+          </div>
+
+          <div class="tekst">
+            <label>Besked</label>
+            <textarea rows="5"></textarea>
+          </div>
+
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </section>
 
   </main>
 </body>
