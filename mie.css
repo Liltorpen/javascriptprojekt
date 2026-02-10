@@ -124,6 +124,7 @@ body {
     font-family: sans-serif;
 }
 
+<<<<<<< HEAD
 /* Knapper */
 .hero-button {
     position: absolute;
@@ -138,6 +139,8 @@ body {
     transition: background 0.3s;
 }
 
+=======
+>>>>>>> df4d996c6993146586f69c18e3010cbde3c57893
 button:hover { background: rgba(255, 255, 255, 0.4); }
 .prev { left: 20px; z-index: 20; /* Skal være højere end både overlay og tekst for at virke */}
 .next { right: 20px; z-index: 20; /* Skal være højere end både overlay og tekst for at virke */ }
@@ -154,11 +157,18 @@ button:hover { background: rgba(255, 255, 255, 0.4); }
     text-align: center;
     padding: 0 20px;
     position: relative;
+<<<<<<< HEAD
     z-index: 5;
 ´
 
     
+<<<<<<< Updated upstream
     z-index: 10;
+=======
+=======
+    z-index: 10;
+>>>>>>> df4d996c6993146586f69c18e3010cbde3c57893
+>>>>>>> Stashed changes
 }
 
 .hero-content h1 {
@@ -317,8 +327,13 @@ button:hover { background: rgba(255, 255, 255, 0.4); }
   max-width: 60ch;
 }
 
+<<<<<<< HEAD
 
 
+<<<<<<< Updated upstream
+=======
+=======
+>>>>>>> Stashed changes
 .contact-section {
     padding: 100px 10% 120px 10%; 
     background-color: #ffffff;
@@ -365,6 +380,10 @@ button:hover { background: rgba(255, 255, 255, 0.4); }
 .info-box a:hover {
     border-bottom: 1px solid #8b2c35;
 }
+<<<<<<< Updated upstream
+=======
+>>>>>>> df4d996c6993146586f69c18e3010cbde3c57893
+>>>>>>> Stashed changes
 
 /* kontakt */
 .kontakt {
@@ -445,14 +464,24 @@ button:hover { background: rgba(255, 255, 255, 0.4); }
   padding: 12px 40px;
   cursor: pointer;
   font-size: 0.9rem;
+<<<<<<< Updated upstream
   align-self: flex-end;
+=======
+<<<<<<< HEAD
+=======
+  align-self: flex-end;
+>>>>>>> df4d996c6993146586f69c18e3010cbde3c57893
+>>>>>>> Stashed changes
 }
 
 
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> df4d996c6993146586f69c18e3010cbde3c57893
 @media (max-width: 768px) {
     .contact-grid {
         grid-template-columns: 1fr;
