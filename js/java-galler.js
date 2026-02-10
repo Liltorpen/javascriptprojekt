@@ -3,6 +3,7 @@ const billedArray = Array.from(document.querySelectorAll('.slide'));
 let currentSlide = 0;
 let autoSlideInterval;
 
+ 
 // Håndterer skift af slides, opdaterer index og nulstiller timeren
 function changeSlide(direction) {
     stopAutoSlide();
@@ -35,15 +36,3 @@ function stopAutoSlide() {
 
 // Initialiserer slideshowet når siden indlæses
 startAutoSlide();
-
-// Genstarter animationen på det første billede
-window.addEventListener('load', () => {
-    const firstSlide = billedArray[0];
-    // Vi fjerner og tilføjer klassen med en mikroskopisk forsinkelse
-    // Det tvinger browseren til at opfatte det som en ny bevægelse
-    firstSlide.classList.remove('active');
-    
-    setTimeout(() => {
-        firstSlide.classList.add('active');
-    }, 50); 
-});
