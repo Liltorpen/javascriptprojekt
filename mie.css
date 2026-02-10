@@ -179,7 +179,7 @@ body {
 }
 
 #historie {
-  background-color: var(--accent-color);
+  background-color: #8b2c35;
   padding: 100px 0;
   width: 100%;
   display: flex;
@@ -207,17 +207,17 @@ body {
 
 #historie-content {
   flex: 1;
-  color: var(--hvid);
+  color: white;
 }
 
 #historie-content h2 {
-  color: var(--hvid);
+  color: white;
   text-align: left;
   margin-bottom: 25px;
 }
 
 #historie-content p {
-  color: var(--hvid);
+  color: white;
   font-size: 18px;
   margin-bottom: 30px;
   max-width: 60ch;
