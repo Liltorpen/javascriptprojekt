@@ -16,9 +16,7 @@ body {
 
     height: 100vh;
     width: 100%;
-    /* Husk at filen skal hedde baggrund.jpg og ligge i samme mappe */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('baggrund.jpg');
-    background-size: cover;
+    /* Husk at filen skal hedde baggrund.jpg og ligge i samme mappe */  
     background-position: center;
     position: relative;
     display: flex;
@@ -33,7 +31,7 @@ body {
     padding: 40px 60px;
     position: absolute;
     width: 100%;
-    z-index: 100;
+    z-index: 100; /* Altid øverst */
 }
 
 .logo img {
@@ -56,6 +54,30 @@ body {
     width: 100%;
     background-color: white;
     border-radius: 2px;
+}
+
+/* 1. Slider containeren (Bunden) */
+.slider-container {
+    position: absolute;
+    inset: 0;
+    z-index: 1; /* Lav værdi så den bliver i baggrunden */
+    overflow: hidden;
+}
+
+/* 2. Overlayet (Ligger inde i containeren, men over billederne) */
+.slider-container::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    /* Din linear-gradient overlay */
+    background: linear-gradient(
+        to bottom, 
+        rgba(0,0,0,0.4) 100%, 
+        transparent 50%, 
+        rgba(0,0,0,0.7) 100%
+    );
+    z-index: 2; /* Højere end billederne, men lavere end teksten */
+    pointer-events: none; /* VIGTIGT: Gør at man kan klikke "igennem" skyggen */
 }
 
 .hero-slider {
@@ -102,6 +124,7 @@ body {
     font-family: sans-serif;
 }
 
+<<<<<<< HEAD
 /* Knapper */
 .hero-button {
     position: absolute;
@@ -116,9 +139,12 @@ body {
     transition: background 0.3s;
 }
 
+=======
+>>>>>>> df4d996c6993146586f69c18e3010cbde3c57893
 button:hover { background: rgba(255, 255, 255, 0.4); }
-.prev { left: 20px; }
-.next { right: 20px; }
+.prev { left: 20px; z-index: 20; /* Skal være højere end både overlay og tekst for at virke */}
+.next { right: 20px; z-index: 20; /* Skal være højere end både overlay og tekst for at virke */ }
+
 
 /* 5. HERO INDHOLD (TEKSTEN I MIDTEN) */
 .hero-content {
@@ -131,10 +157,14 @@ button:hover { background: rgba(255, 255, 255, 0.4); }
     text-align: center;
     padding: 0 20px;
     position: relative;
+<<<<<<< HEAD
     z-index: 5;
 ´
 
     
+=======
+    z-index: 10;
+>>>>>>> df4d996c6993146586f69c18e3010cbde3c57893
 }
 
 .hero-content h1 {
@@ -293,8 +323,57 @@ button:hover { background: rgba(255, 255, 255, 0.4); }
   max-width: 60ch;
 }
 
+<<<<<<< HEAD
 
 
+=======
+.contact-section {
+    padding: 100px 10% 120px 10%; 
+    background-color: #ffffff;
+    color: #333;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 80px; 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.info-box h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: #8b2c35; 
+}
+
+.divider {
+    width: 40px;
+    height: 2px;
+    background-color: #8b2c35;
+    margin-bottom: 30px;
+}
+
+.info-box p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+
+.info-box a {
+    color: #8b2c35;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.info-box a:hover {
+    border-bottom: 1px solid #8b2c35;
+}
+>>>>>>> df4d996c6993146586f69c18e3010cbde3c57893
 
 /* kontakt */
 .kontakt {
@@ -375,17 +454,32 @@ button:hover { background: rgba(255, 255, 255, 0.4); }
   padding: 12px 40px;
   cursor: pointer;
   font-size: 0.9rem;
+<<<<<<< HEAD
+=======
+  align-self: flex-end;
+>>>>>>> df4d996c6993146586f69c18e3010cbde3c57893
 }
 
 
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> df4d996c6993146586f69c18e3010cbde3c57893
 @media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        padding: 0 20px;
+    }
+    
+    .contact-section {
+        padding: 60px 20px;
+    }
 
-  #historie-container {
-    flex-direction: column;
-  }
-
+    #historie-container {
+      flex-direction: column;
+    }
 }
