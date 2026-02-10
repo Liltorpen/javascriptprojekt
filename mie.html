@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gudhjem Is - Hele Bornholms Ishus</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="js/mie.js" defer></script>
+    <script src="js/java-galler.js" defer></script>
+    <link rel="stylesheet" href="mie.css">
+</head>
+<body>
+
+    <header class="hero">
+        
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/gudhjemislogo.png" alt="Gudhjem Is Logo">
+            </div>
+
+
+            <div id="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+
+        <!-- Tekst i midten -->
+        <div class="hero-content">
+            <h1>Hele Bornholms ishus på Gudhjem havn</h1>
+            <p class="subtitle">EN SØD BID AF BORNHOLM SIDEN 1959</p>
+            <p class="opening-info">Vi åbner til påske 28. marts. og glæder os til at se jer alle</p>
+        
+        <div class="slider-container">
+
+        <div class="slide active">
+            <img src="imagesgalleri1/1.png" alt="Billede af to is">
+        </div>
+        
+        <div class="slide">
+            <img src="imagesgalleri1/2.jpg" alt="Billede af Gudhjem Havn ude foran isbutikken">
+        </div>
+
+        <div class="slide">
+            <img src="imagesgalleri1/3.jpg" alt="Billede af to is">
+        </div>
+
+        <div class="slide">
+            <img src="imagesgalleri1/4.jpg" alt="Billede af en is, foran Gudhjem Havn">
+        </div>
+
+    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+        </div>
+
+        <!-- Rød knap i siden -->
+        <div class="side-tab">
+            Bestil is-boks
+        </div>
+    </header>
+
+    <!-- SIDE-MENU (Slider ind fra højre) -->
+    <div id="side-menu">
+        <div id="close-menu">&times;</div>
+        <ul class="nav-links">
+            <li><a href="#">Åbningstider</a></li>
+            <li><a href="#">Find vej</a></li>
+            <li><a href="#">Historien</a></li>
+            <li><a href="#">Kontakt</a></li>
+            <li><a href="#">Jobs</a></li>
+        </ul>
+    </div>
+
+    <!-- Mørk baggrund når menu er åben -->
+    <div id="menu-shade"></div>
+
+    <main>
+    <section id="intro">
+      <h2>Is, sommerdrømme & Gudhjem i solen</h2>
+      <p>Ishuset på Gudhjem havn siden 1959. Vi er idag 3. generation der driver ishuset med samme passion forgod is, sommer og ferie.</p>
+    </section>
+
+    <section id="historie">
+    <div id="historie-container">
+      <div id="historie-image">
+        <img src="images/gudhjem_is_2.jpg.webp" alt="Gudhjem is butiksfacade om sommeren med farverige skilte, en lyserød tuc-tuc. Meningen med billedet er at understytte forretningens historie.">
+      </div>
+      
+      <div id="historie-content">
+        <h2>Historien om det originale bornholmske ishus på Gudhjem siden 1959.</h2>
+        <p>Det er nu 3. generation af den oprindelig stiftende familie, som driver ishuset på havnen i Gudhjem. Stadig med fuldt fokus på gode gammeldags sommeroplevelser for hele familien. <br><br>Hvad enten du er på ferie med dine kære eller bare er lækkersulten, er der altid masser at vælge imellem i vores ishus.<br><br>Vi glæder os til at byde dig velkommen.</p>
+      </div>
+    </div>
+    </section>
+    </main>
+
+
+</body>
+</html>
