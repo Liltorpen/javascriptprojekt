@@ -1,0 +1,167 @@
+/* 1. GRUNDLÆGGENDE RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    background-color: #f4f4f4;
+}
+
+/* 2. HERO SEKTION (BAGGRUNDSBILLEDE) */
+.hero {
+    height: 100vh;
+    width: 100%;
+    /* Husk at filen skal hedde baggrund.jpg og ligge i samme mappe */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('baggrund.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 3. NAVBAR (LOGO OG BURGER) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 60px;
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+}
+
+.logo img {
+    height: 60px; /* Her kan du justere størrelsen på dit logo */
+}
+
+/* 4. BURGER-IKONET */
+#burger-menu {
+    width: 35px;
+    height: 22px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#burger-menu span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 2px;
+}
+
+/* 5. HERO INDHOLD (TEKSTEN I MIDTEN) */
+.hero-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 300;
+    margin-bottom: 15px;
+    max-width: 900px;
+    line-height: 1.2;
+}
+
+.subtitle {
+    font-size: 0.9rem; /* Rettet: Punktum i stedet for komma */
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 80px;
+}
+
+.opening-info {
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+/* 6. BESTIL IS-BOKS (DEN RØDE KNAP I SIDEN) */
+.side-tab {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+    transform-origin: right bottom;
+    background-color: #8b2c35;
+    color: white;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    z-index: 50;
+}
+
+/* 7. SIDE-MENU (SLIDER IND FRA HØJRE) */
+#side-menu {
+    position: fixed;
+    top: 0;
+    right: -450px; /* Starter uden for skærmen */
+    width: 400px;
+    height: 100vh;
+    background-color: rgba(139, 44, 53, 0.98); /* Gudhjem Is rød */
+    z-index: 2000;
+    transition: 0.5s ease-in-out;
+    padding: 100px 60px;
+}
+
+/* Denne klasse tilføjes via JavaScript når man trykker på burger */
+#side-menu.open {
+    right: 0;
+}
+
+#close-menu {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+/* LINKS INDE I MENUEN */
+.nav-links {
+    list-style: none;
+    padding-top: 20px;
+}
+
+.nav-links li {
+    margin-bottom: 25px;
+}
+
+.nav-links a {
+    font-family: 'Playfair Display', serif;
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem; /* Her styres størrelsen på menu-teksten */
+    font-weight: 400;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.7;
+}
+
+/* 8. SKYGGE BAG MENUEN (GØR SIDEN MØRK) */
+#menu-shade {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 1500;
+}
