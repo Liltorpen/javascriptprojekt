@@ -291,3 +291,63 @@ button:hover { background: rgba(255, 255, 255, 0.4); }
   }
 
 }
+
+
+.contact-section {
+    padding: 100px 10% 120px 10%; 
+    background-color: #ffffff;
+    color: #333;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 80px; 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.info-box h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: #8b2c35; 
+}
+
+.divider {
+    width: 40px;
+    height: 2px;
+    background-color: #8b2c35;
+    margin-bottom: 30px;
+}
+
+.info-box p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+
+.info-box a {
+    color: #8b2c35;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.info-box a:hover {
+    border-bottom: 1px solid #8b2c35;
+}
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        padding: 0 20px;
+    }
+    
+    .contact-section {
+        padding: 60px 20px;
+    }
+}
