@@ -288,15 +288,6 @@ button:hover { background: rgba(255, 255, 255, 0.4); }
   max-width: 60ch;
 }
 
-@media (max-width: 768px) {
-
-  #historie-container {
-    flex-direction: column;
-  }
-
-}
-
-
 .contact-section {
     padding: 100px 10% 120px 10%; 
     background-color: #ffffff;
@@ -353,5 +344,9 @@ button:hover { background: rgba(255, 255, 255, 0.4); }
     
     .contact-section {
         padding: 60px 20px;
+    }
+
+    #historie-container {
+      flex-direction: column;
     }
 }
