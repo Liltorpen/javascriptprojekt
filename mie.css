@@ -121,20 +121,6 @@ body {
     font-family: sans-serif;
 }
 
-/* Knapper */
-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.2);
-    border: none;
-    color: white;
-    padding: 15px;
-    cursor: pointer;
-    z-index: 30;
-    transition: background 0.3s;
-}
-
 button:hover { background: rgba(255, 255, 255, 0.4); }
 .prev { left: 20px; z-index: 20; /* Skal være højere end både overlay og tekst for at virke */}
 .next { right: 20px; z-index: 20; /* Skal være højere end både overlay og tekst for at virke */ }
@@ -355,6 +341,92 @@ button:hover { background: rgba(255, 255, 255, 0.4); }
 .info-box a:hover {
     border-bottom: 1px solid #8b2c35;
 }
+
+/* kontakt */
+.kontakt {
+  background: #f6f3ef;
+  padding: 120px 80px;
+}
+
+.kontakt-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+
+/* LEFT */
+.kontakt-info h2 {
+  font-size: 3rem;
+  color: #8b3a1c;
+  margin-bottom: 10px;
+}
+
+.kontakt-subtitle {
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.kontakt-text {
+  max-width: 350px;
+  margin-bottom: 60px;
+}
+
+.kontakt-details .email {
+  margin-bottom: 25px;
+  font-size: 0.95rem;
+}
+
+.socials span {
+  margin-right: 15px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+/* FORM */
+.kontakt-form {
+  width: 100%;
+}
+
+.kontakt-form .row {
+  display: flex;
+  gap: 20px;
+}
+
+.tekst {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+.tekst label {
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+}
+
+.tekst input,
+.tekst textarea {
+  border: 1px solid #999;
+  padding: 10px;
+  background: transparent;
+  font-family: inherit;
+}
+
+.kontakt-form button {
+  background: #b14a1f;
+  color: white;
+  border: none;
+  padding: 12px 40px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  align-self: flex-end;
+}
+
+
+
+
 
 @media (max-width: 768px) {
     .contact-grid {
