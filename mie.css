@@ -1,0 +1,470 @@
+/* 1. GRUNDLÆGGENDE RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    background-color: #f4f4f4;
+}
+
+/* 2. HERO SEKTION (BAGGRUNDSBILLEDE) */
+.hero {
+
+    height: 100vh;
+    width: 100%;
+    /* Husk at filen skal hedde baggrund.jpg og ligge i samme mappe */  
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 3. NAVBAR (LOGO OG BURGER) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 60px;
+    position: absolute;
+    width: 100%;
+    z-index: 100; /* Altid øverst */
+}
+
+.logo img {
+    height: 60px; /* Her kan du justere størrelsen på dit logo */
+}
+
+/* 4. BURGER-IKONET */
+#burger-menu {
+    width: 35px;
+    height: 22px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#burger-menu span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 2px;
+}
+
+/* 1. Slider containeren (Bunden) */
+.slider-container {
+    position: absolute;
+    inset: 0;
+    z-index: 1; /* Lav værdi så den bliver i baggrunden */
+    overflow: hidden;
+}
+
+/* 2. Overlayet (Ligger inde i containeren, men over billederne) */
+.slider-container::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    /* Din linear-gradient overlay */
+    background: linear-gradient(
+        to bottom, 
+        rgba(0,0,0,0.4) 100%, 
+        transparent 50%, 
+        rgba(0,0,0,0.7) 100%
+    );
+    z-index: 2; /* Højere end billederne, men lavere end teksten */
+    pointer-events: none; /* VIGTIGT: Gør at man kan klikke "igennem" skyggen */
+}
+
+.hero-slider {
+    position: relative;
+    width: 100%;
+    height: 90vh; /* Juster højden her */
+    overflow: hidden;
+    background: #000;
+    inset: 0;
+    z-index: 1;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.1);
+    transition: transform 6s linear;
+}
+
+.slide.active img {
+    transform: scale(1);
+}
+
+.content {
+    position: absolute;
+    color: white;
+    text-align: center;
+    z-index: 0;
+    font-family: sans-serif;
+}
+
+/* Knapper */
+.hero-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.3s;
+}
+
+button:hover { background: rgba(255, 255, 255, 0.4); }
+.prev { left: 20px; z-index: 20; /* Skal være højere end både overlay og tekst for at virke */}
+.next { right: 20px; z-index: 20; /* Skal være højere end både overlay og tekst for at virke */ }
+
+
+/* 5. HERO INDHOLD (TEKSTEN I MIDTEN) */
+.hero-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+    position: relative;
+    z-index: 5;
+´
+
+    
+    z-index: 10;
+}
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 300;
+    margin-bottom: 15px;
+    max-width: 900px;
+    line-height: 1.2;
+    
+}
+
+.subtitle {
+    font-size: 0.9rem; /* Rettet: Punktum i stedet for komma */
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 80px;
+}
+
+.opening-info {
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+/* 6. BESTIL IS-BOKS (DEN RØDE KNAP I SIDEN) */
+.side-tab {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+    transform-origin: right bottom;
+    background-color: #8b2c35;
+    color: white;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    z-index: 50;
+}
+
+/* 7. SIDE-MENU (SLIDER IND FRA HØJRE) */
+#side-menu {
+    position: fixed;
+    top: 0;
+    right: -450px; /* Starter uden for skærmen */
+    width: 400px;
+    height: 100vh;
+    background-color: rgba(139, 44, 53, 0.98); /* Gudhjem Is rød */
+    z-index: 2000;
+    transition: 0.5s ease-in-out;
+    padding: 100px 60px;
+}
+
+/* Denne klasse tilføjes via JavaScript når man trykker på burger */
+#side-menu.open {
+    right: 0;
+}
+
+#close-menu {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+/* LINKS INDE I MENUEN */
+.nav-links {
+    list-style: none;
+    padding-top: 20px;
+}
+
+.nav-links li {
+    margin-bottom: 25px;
+}
+
+.nav-links a {
+    font-family: 'Playfair Display', serif;
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem; /* Her styres størrelsen på menu-teksten */
+    font-weight: 400;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.7;
+}
+
+/* 8. SKYGGE BAG MENUEN (GØR SIDEN MØRK) */
+#menu-shade {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 1500;
+}
+
+#intro {
+  padding: 100px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 65ch;
+}
+
+#intro p {
+  margin: 30px 0;
+}
+
+#historie {
+  background-color: #8b2c35;
+  padding: 100px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#historie-container {
+  display: flex;
+  max-width: 1200px;
+  width: 90%;
+  gap: 80px;
+  align-items: center;
+}
+
+#historie-image {
+  flex: 1;
+}
+
+#historie-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+}
+
+#historie-content {
+  flex: 1;
+  color: white;
+}
+
+#historie-content h2 {
+  color: white;
+  text-align: left;
+  margin-bottom: 25px;
+  font-family: 'Playfair Display', serif;
+}
+
+#historie-content p {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 30px;
+  max-width: 60ch;
+}
+
+
+
+.contact-section {
+    padding: 100px 10% 120px 10%; 
+    background-color: #ffffff;
+    color: #333;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 80px; 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.info-box h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: #8b2c35; 
+}
+
+.divider {
+    width: 40px;
+    height: 2px;
+    background-color: #8b2c35;
+    margin-bottom: 30px;
+}
+
+.info-box p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+
+.info-box a {
+    color: #8b2c35;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.info-box a:hover {
+    border-bottom: 1px solid #8b2c35;
+}
+
+/* kontakt */
+.kontakt {
+  background: #f6f3ef;
+  padding: 120px 80px;
+}
+
+.kontakt-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+
+/* LEFT */
+.kontakt-info h2 {
+  font-size: 3rem;
+  color: #8b3a1c;
+  margin-bottom: 10px;
+}
+
+.kontakt-subtitle {
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.kontakt-text {
+  max-width: 350px;
+  margin-bottom: 60px;
+}
+
+.kontakt-details .email {
+  margin-bottom: 25px;
+  font-size: 0.95rem;
+}
+
+.socials span {
+  margin-right: 15px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+/* FORM */
+.kontakt-form {
+  width: 100%;
+}
+
+.kontakt-form .row {
+  display: flex;
+  gap: 20px;
+}
+
+.tekst {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+.tekst label {
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+}
+
+.tekst input,
+.tekst textarea {
+  border: 1px solid #999;
+  padding: 10px;
+  background: transparent;
+  font-family: inherit;
+}
+
+.kontakt-form button {
+  background: #b14a1f;
+  color: white;
+  border: none;
+  padding: 12px 40px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  align-self: flex-end;
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        padding: 0 20px;
+    }
+    
+    .contact-section {
+        padding: 60px 20px;
+    }
+
+    #historie-container {
+      flex-direction: column;
+    }
+}
