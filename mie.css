@@ -13,6 +13,7 @@ body {
 
 /* 2. HERO SEKTION (BAGGRUNDSBILLEDE) */
 .hero {
+
     height: 100vh;
     width: 100%;
     /* Husk at filen skal hedde baggrund.jpg og ligge i samme mappe */
@@ -63,6 +64,8 @@ body {
     height: 90vh; /* Juster højden her */
     overflow: hidden;
     background: #000;
+    inset: 0;
+    z-index: 1;
 }
 
 .slide {
@@ -100,7 +103,7 @@ body {
 }
 
 /* Knapper */
-button {
+.hero-button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -127,6 +130,11 @@ button:hover { background: rgba(255, 255, 255, 0.4); }
     color: white;
     text-align: center;
     padding: 0 20px;
+    position: relative;
+    z-index: 5;
+´
+
+    
 }
 
 .hero-content h1 {
@@ -136,6 +144,7 @@ button:hover { background: rgba(255, 255, 255, 0.4); }
     margin-bottom: 15px;
     max-width: 900px;
     line-height: 1.2;
+    
 }
 
 .subtitle {
@@ -283,6 +292,95 @@ button:hover { background: rgba(255, 255, 255, 0.4); }
   margin-bottom: 30px;
   max-width: 60ch;
 }
+
+
+
+
+/* kontakt */
+.kontakt {
+  background: #f6f3ef;
+  padding: 120px 80px;
+}
+
+.kontakt-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+
+/* LEFT */
+.kontakt-info h2 {
+  font-size: 3rem;
+  color: #8b3a1c;
+  margin-bottom: 10px;
+}
+
+.kontakt-subtitle {
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.kontakt-text {
+  max-width: 350px;
+  margin-bottom: 60px;
+}
+
+.kontakt-details .email {
+  margin-bottom: 25px;
+  font-size: 0.95rem;
+}
+
+.socials span {
+  margin-right: 15px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+/* FORM */
+.kontakt-form {
+  width: 100%;
+}
+
+.kontakt-form .row {
+  display: flex;
+  gap: 20px;
+}
+
+.tekst {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+.tekst label {
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+}
+
+.tekst input,
+.tekst textarea {
+  border: 1px solid #999;
+  padding: 10px;
+  background: transparent;
+  font-family: inherit;
+}
+
+.kontakt-form button {
+  background: #b14a1f;
+  color: white;
+  border: none;
+  padding: 12px 40px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+
+
+
+
 
 @media (max-width: 768px) {
 
