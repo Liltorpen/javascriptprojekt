@@ -1,7 +1,7 @@
 // 1. DATA: Et Array af Objekter
 const menuItems = [
     { label: 'Historien', link: '#historie' },
-    { label: 'IS-KORT 2026', link: '#smag-sektion' }, 
+    { label: 'Iskort 2026', link: '#smag-sektion' }, 
     { label: 'Åbningstider', link: '#kontakt' },
     { label: 'Kontakt', link: '#kontakt' },
 ];
