@@ -26,7 +26,7 @@ function changeSlide(direction) {
 function startAutoSlide() {
     autoSlideInterval = setInterval(() => {
         changeSlide(1);
-    }, 5000);
+    }, 6000);
 }
 
 // Stopper det automatiske skift ved at rydde det aktive interval
