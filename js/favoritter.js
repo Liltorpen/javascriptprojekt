@@ -1,4 +1,4 @@
-// 1. VARIABLE SCOPE
+// VARIABLE SCOPE
 const smagKnap = document.querySelector('#vis-smage-btn');
 const smagWrapper = document.querySelector('#smag-wrapper');
 const smagOutput = document.querySelector('#smag-output');
