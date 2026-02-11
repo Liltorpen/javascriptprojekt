@@ -8,10 +8,10 @@ let erSmageGenereret = false;
 
 // 2. ARRAY AF OBJEKTER (Pensum: Arrays & Objekter)
 const isSmage = [
-    { navn: "Gammeldags Vanilje", pris: 35, vegansk: false },
-    { navn: "Mørk Chokolade", pris: 35, vegansk: true },
-    { navn: "Bornholmsk Jordbær", pris: 40, vegansk: false },
-    { navn: "Havtorn Sorbet", pris: 40, vegansk: true }
+    { navn: "Gammeldags Vanilje", pris: 20, vegansk: false },
+    { navn: "Mørk Chokolade", pris: 24, vegansk: true },
+    { navn: "Bornholmsk Jordbær", pris: 24, vegansk: false },
+    { navn: "Havtorn Sorbet", pris: 20, vegansk: true }
 ];
 
 // 3. FUNKTION TIL BEREGNING (Pensum: Return statement & Operatorer) 
@@ -31,13 +31,14 @@ const toggleSmage = () => {
         for (let i = 0; i < isSmage.length; i++) {
             let smag = isSmage[i];
             let moms = beregnMomsAfPris(smag.pris);
+            let totalPris = smag.pris + moms;
             
             // Logik: Tilføj et mærke hvis smagen er vegansk (Operator: ===)
             let veganskTag = smag.vegansk === true ? " (Vegansk)" : "";
 
             listeHTML += "<li class='smag-item'>" + 
                             "<strong>" + smag.navn + veganskTag + "</strong>" + 
-                            "<span>" + smag.pris + " kr.</span>" + 
+                            "<span>" + totalPris + " kr.</span>" + 
                          "</li>";
         }
 
