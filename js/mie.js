@@ -1,11 +1,9 @@
 // 1. DATA: Et Array af Objekter
 const menuItems = [
-    { label: 'Åbningstider', link: '#opening' },
-    { label: 'Find vej', link: '#map' },
     { label: 'Historien', link: '#historie' },
+    { label: 'IS-KORT 2026', link: '#smag-sektion' }, 
+    { label: 'Åbningstider', link: '#kontakt' },
     { label: 'Kontakt', link: '#kontakt' },
-    { label: 'Jobs', link: '#jobs' }, 
-    { label: 'IS-KORT 2026', link: '#menu' } 
 ];
 
 // 2. DOM-referencer
