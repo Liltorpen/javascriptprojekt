@@ -451,6 +451,92 @@ position: fixed;
 }
 
 
+
+/* kontakt */
+.kontakt {
+  background: #f6f3ef;
+  padding: 120px 80px;
+}
+
+.kontakt-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+
+/* LEFT */
+.kontakt-info h2 {
+  font-size: 3rem;
+  color: #8b3a1c;
+  margin-bottom: 10px;
+}
+
+.kontakt-subtitle {
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.kontakt-text {
+  max-width: 350px;
+  margin-bottom: 60px;
+}
+
+.kontakt-details .email {
+  margin-bottom: 25px;
+  font-size: 0.95rem;
+}
+
+.socials span {
+  margin-right: 15px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+/* FORM */
+.kontakt-form {
+  width: 100%;
+}
+
+.kontakt-form .row {
+  display: flex;
+  gap: 20px;
+}
+
+.tekst {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+.tekst label {
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+}
+
+.tekst input,
+.tekst textarea {
+  border: 1px solid #999;
+  padding: 10px;
+  background: transparent;
+  font-family: inherit;
+}
+
+.kontakt-form button {
+  background: #b14a1f;
+  color: white;
+  border: none;
+  padding: 12px 40px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  align-self: flex-end;
+}
+
+
+
+
 @media (max-width: 768px) {
     .contact-grid {
         grid-template-columns: 1fr;
