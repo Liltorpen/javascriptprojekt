@@ -6,9 +6,12 @@
     <title>Gudhjem Is - Hele Bornholms Ishus</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+   
     <script src="js/mie.js" defer></script>
     <script src="js/java-galler.js" defer></script>
+    <script src="mathias.js" defer></script>
     <link rel="stylesheet" href="mie.css">
+   
 </head>
 <body>
 
@@ -107,143 +110,78 @@
       </div>
     </div>
     </section>
+ 
 
-    <section class="kontakt">
-  <div class="kontakt-wrapper">
 
-    <!-- Venstre del -->
-    <div class="kontakt-info">
-      <h2>Kontakt os!</h2>
-      <p class="kontakt-subtitle">Telefon: 93 99 37 60</p>
+    <!-- Kontakt delen -->
+  <section class="kontakt">
+    <div class="kontakt-wrapper">
 
-      <p class="kontakt-text">
-        bla bla bla bla bla bla bla bla   bla bla bla bla bla bla bla bla   bla bla bla bla bla bla bla bla
-      </p>
+      <!-- Venstre del -->
+      <div class="kontakt-info">
+        <h2>Kontakt os!</h2>
+        <p class="kontakt-subtitle">Telefon: 93 99 37 60</p>
 
-      <div class="kontakt-details">
-        <div class="email">
-          ✉️ <span>E-mail: info@gudhjemis.dk</span>
-        </div>
+        <p class="kontakt-text">
+          bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+        </p>
 
-        <div class="socials">
-          <span>f</span>
-          <span>in</span>
+        <div class="kontakt-details">
+          <div class="email">
+            ✉️ <span>E-mail: info@gudhjemis.dk</span>
+          </div>
+
+          <div class="socials">
+            <span>f</span>
+            <span>in</span>
+          </div>
         </div>
       </div>
+
+      <!-- Højre del -->
+      <form class="kontakt-form" id="kontaktForm" novalidate>
+
+        <div class="row">
+          <div class="tekst">
+            <label for="fornavn">Fornavn</label>
+            <input type="text" id="fornavn">
+          </div>
+
+          <div class="tekst">
+            <label for="telefon">Telefon nummer</label>
+            <input type="text" id="telefon">
+          </div>
+        </div>
+
+        <div class="tekst">
+          <label for="email">Email </label>
+          <input type="email" id="email" required>
+        </div>
+
+        <div class="tekst">
+          <label for="besked">Besked</label>
+          <textarea id="besked" rows="5"></textarea>
+        </div>
+
+        <button type="submit" id="submitBtn">Send</button>
+        <p id="form-status"></p>
+
+      </form>
     </div>
+  </section>
 
-    <!-- Højre del -->
-    <form class="kontakt-form">
-      <div class="row">
-        <div class="tekst">
-          <label>Fornavn</label>
-          <input type="text">
-        </div>
 
-        <div class="tekst">
-          <label>Telefon nummer</label>
-          <input type="text">
-        </div>
-      </div>
 
-      <div class="tekst">
-        <label>Email *</label>
-        <input type="email" required>
-      </div>
 
-      <div class="tekst">
-        <label>Besked</label>
-        <textarea rows="5"></textarea>
-      </div>
 
-      <button type="submit">Send</button>
-    </form>
 
-  </div>
-</section>
+
+
+
+
+
+
     </main>
-
-    <section class="contact-section">
-    <div class="contact-grid">
-        
-
-        <div class="info-box">
-            <h2>Åbningstider</h2>
-            <div class="divider"></div>
-            <p>Vi holder vinterlukket lige nu.</p>
-            <p><strong>Vi åbner igen til påske:</strong><br>
-            Fredag d. 28. marts 2026</p>
-            <p>Følg med her på siden eller på vores sociale medier for opdaterede tider i løbet af sæsonen.</p>
-        </div>
-
-
-        <div class="info-box">
-            <h2>Kontakt os</h2>
-            <div class="divider"></div>
-            <p>Gudhjem Is / Ishuset på havnen</p>
-            <p>Ejnar Mikkelsens Vej 15<br>
-            3760 Gudhjem</p>
-            <p>Email: <a href="mailto:is@gudhjemis.dk">is@gudhjemis.dk</a></p>
-            <p>Telefon: +45 12 34 56 78</p>
-        </div>
-
-    </div>
-</section>
-
-<section class="kontakt">
-  <div class="kontakt-wrapper">
-
-    <!-- Venstre del -->
-    <div class="kontakt-info">
-      <h2>Kontakt os!</h2>
-      <p class="kontakt-subtitle">Telefon: 93 99 37 60</p>
-
-      <p class="kontakt-text">
-        bla bla bla bla bla bla bla bla   bla bla bla bla bla bla bla bla   bla bla bla bla bla bla bla bla
-      </p>
-
-      <div class="kontakt-details">
-        <div class="email">
-          ✉️ <span>E-mail: info@gudhjemis.dk</span>
-        </div>
-
-        <div class="socials">
-          <span>f</span>
-          <span>in</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Højre del -->
-    <form class="kontakt-form">
-      <div class="row">
-        <div class="tekst">
-          <label>Fornavn</label>
-          <input type="text">
-        </div>
-
-        <div class="tekst">
-          <label>Telefon nummer</label>
-          <input type="text">
-        </div>
-      </div>
-
-      <div class="tekst">
-        <label>Email *</label>
-        <input type="email" required>
-      </div>
-
-      <div class="tekst">
-        <label>Besked</label>
-        <textarea rows="5"></textarea>
-      </div>
-
-      <button type="submit">Send</button>
-    </form>
-
-  </div>
-</section>
-
 
 </body>
 </html>
