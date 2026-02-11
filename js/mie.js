@@ -2,8 +2,8 @@
 const menuItems = [
     { label: 'Åbningstider', link: '#opening' },
     { label: 'Find vej', link: '#map' },
-    { label: 'Historien', link: '#history' },
-    { label: 'Kontakt', link: '#contact' },
+    { label: 'Historien', link: '#historie' },
+    { label: 'Kontakt', link: '#kontakt' },
     { label: 'Jobs', link: '#jobs' }, 
     { label: 'IS-KORT 2026', link: '#menu' } 
 ];
