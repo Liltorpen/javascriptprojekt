@@ -6,7 +6,7 @@ const smagOutput = document.querySelector('#smag-output');
 // Boolean til at styre om listen er bygget
 let erSmageGenereret = false;
 
-// 2. ARRAY AF OBJEKTER
+// ARRAY AF OBJEKTER
 const isSmage = [
     { navn: "Gammeldags Vanilje", pris: 20, vegansk: false },
     { navn: "Mørk Chokolade", pris: 24, vegansk: true },
@@ -14,20 +14,20 @@ const isSmage = [
     { navn: "Havtorn Sorbet", pris: 20, vegansk: true }
 ];
 
-// 3. FUNKTION TIL BEREGNING
+// FUNKTION TIL BEREGNING
 function beregnMomsAfPris(pris) {
     return pris * 0.25; // Returnerer momsen (25%)
 }
 
-// 4. HOVEDFUNKTION
+// HOVEDFUNKTION
 const toggleSmage = () => {
     
-    // 5. KONTROLSTRUKTUR: Byg kun listen hvis den ikke findes 
+    // KONTROLSTRUKTUR: Byg kun listen hvis den ikke findes 
     if (erSmageGenereret === false) {
         let listeHTML = "<ul class='smag-liste'>";
         let totalMoms = 0;
 
-        // 6. LOOP: Gennemløber arrayet
+        // LOOP: Gennemløber arrayet
         for (let i = 0; i < isSmage.length; i++) {
             let smag = isSmage[i];
             let moms = beregnMomsAfPris(smag.pris);
@@ -49,9 +49,9 @@ const toggleSmage = () => {
         erSmageGenereret = true; 
     }
 
-    // 7. TOGGLE: Skifter klassen for at køre CSS-animationen
+    // TOGGLE: Skifter klassen for at køre CSS-animationen
     smagWrapper.classList.toggle('aaben');
 };
 
-// 8. EVENT LISTENER: Lytter efter klik
+// EVENT LISTENER: Lytter efter klik
 smagKnap.addEventListener('click', toggleSmage);
