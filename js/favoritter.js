@@ -11,7 +11,7 @@ const isSmage = [
     { navn: "Gammeldags Vanilje", pris: 20, vegansk: false },
     { navn: "Mørk Chokolade", pris: 24, vegansk: true },
     { navn: "Bornholmsk Jordbær", pris: 24, vegansk: false },
-    { navn: "Havtorn Sorbet", pris: 20, vegansk: true }
+    { navn: "Havtorn Sorbet", pris: 20, vegansk: true },
 ];
 
 // FUNKTION TIL BEREGNING
