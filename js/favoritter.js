@@ -25,7 +25,6 @@ const toggleSmage = () => {
     // KONTROLSTRUKTUR: Byg kun listen hvis den ikke findes 
     if (erSmageGenereret === false) {
         let listeHTML = "<ul class='smag-liste'>";
-        let totalMoms = 0;
 
         // LOOP: Gennemløber arrayet
         for (let i = 0; i < isSmage.length; i++) {
