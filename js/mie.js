@@ -1,23 +1,52 @@
-// 1. Selektion af elementer (DOM referencer)
-const burgerBtn = document.querySelector('#burger-menu');
+// 1. DATA: Et Array af Objekter
+const menuItems = [
+    { label: 'Åbningstider', link: '#opening' },
+    { label: 'Find vej', link: '#map' },
+    { label: 'Historien', link: '#historie' },
+    { label: 'Kontakt', link: '#kontakt' },
+    { label: 'Jobs', link: '#jobs' }, 
+    { label: 'IS-KORT 2026', link: '#menu' } 
+];
+
+// 2. DOM-referencer
 const sideMenu = document.querySelector('#side-menu');
 const menuShade = document.querySelector('#menu-shade');
-const closeBtn = document.querySelector('#close-menu');
+const menuContainer = document.querySelector('#menu-container');
 
-// 2. Funktion til at styre menuens "state"
-const toggleMenu = () => {
-    // Vi toggler klassen 'open' på menuen
-    const isOpen = sideMenu.classList.toggle('open');
-    
-    // Vi styrer skyggens synlighed baseret på menuens tilstand
-    if (isOpen) {
-        menuShade.style.display = 'block';
-    } else {
-        menuShade.style.display = 'none';
+// 3. RENDER-FUNKTION (Loops, Template Literals og DOM-manipulation)
+const renderMenu = () => {
+    if (menuContainer) {
+        let menuHTML = ''; 
+
+        menuItems.forEach((item) => {
+            menuHTML += `<li><a href="${item.link}">${item.label}</a></li>`;
+        });
+
+        menuContainer.innerHTML = menuHTML;
     }
 };
 
-// 3. Event Listeners (Interaktion)
-burgerBtn.addEventListener('click', toggleMenu);
-closeBtn.addEventListener('click', toggleMenu);
-menuShade.addEventListener('click', toggleMenu);
+// 4. LOGIK (Toggle-mekanisme)
+const toggleMenu = () => {
+    if (sideMenu && menuShade) {
+        const isOpen = sideMenu.classList.toggle('open');
+        menuShade.style.display = isOpen ? 'block' : 'none';
+    }
+};
+
+// 5. EVENT HANDLING (Array og Loop)
+const triggers = [
+    document.querySelector('#burger-menu'),
+    document.querySelector('#close-menu'),
+    menuShade
+];
+
+// Vi bruger forEach til at tildele click-event til alle knapperne
+triggers.forEach(btn => {
+    if (btn) { 
+        btn.addEventListener('click', toggleMenu);
+    }
+});
+
+// Kør funktionen
+renderMenu();
