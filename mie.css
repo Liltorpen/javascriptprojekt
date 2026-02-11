@@ -25,17 +25,27 @@ body {
     flex-direction: column;
 }
 
-/* 3. NAVBAR (LOGO OG BURGER) */
+
+/* 3. NAVBAR (Standard tilstand) */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 40px 60px;
-    position: fixed;
+    position: fixed; 
+    top: 0;
+    left: 0;
     width: 100%;
-    z-index: 100; 
+    z-index: 1000; 
+    background-color: transparent; 
+    transition: all 0.4s ease-in-out; 
 }
 
+.navbar.scrolled {
+    background-color: #8b2c35; 
+    padding: 15px 60px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
 .logo img {
     height: 60px;
 }
